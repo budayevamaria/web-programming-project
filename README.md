@@ -15,7 +15,7 @@ The system considers both physical household tasks and mental load, including pl
 
 
 ## Technology Stack
-- Frontend: React Native, React.js
+- Frontend: React.js
 - Backend: Node.js, Express.js
 - Database: MongoDB
 - Machine Learning: Python, scikit-learn
