@@ -1,10 +1,10 @@
 
-# HouseShare
+# HomeSync
 
 ### A Digital Platform for Managing and Analyzing Family Responsibilities
 
 ## Description
-HouseShare is a mobile and web platform designed to help families organize household responsibilities, track completed tasks, and analyze workload distribution.
+HomeSync is a mobile and web platform designed to help families organize household responsibilities, track completed tasks, and analyze workload distribution.
 
 The system considers both physical household tasks and mental load, including planning, remembering, and coordinating activities.
 
@@ -20,9 +20,3 @@ The system considers both physical household tasks and mental load, including pl
 - Database: MongoDB
 - Machine Learning: Python, scikit-learn
 - AI: OpenAI API
-
-## Project Structure
-- frontend/ – Mobile and web application
-- backend/ – Server and API
-- ml/ – Machine learning and data analysis
-- docs/ – Project documentation
