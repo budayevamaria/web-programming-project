@@ -21,4 +21,3 @@ The system considers both physical household tasks and mental load, including pl
 - Database: MongoDB
 - Machine Learning: Python, scikit-learn
 - AI: OpenAI API
-  > > > > > > > 515fe879cc74dc40c478167a9d8cf8f95635db7e
