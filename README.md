@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # HomeSync Premium checkout (standalone)
 
 A separate payment app: no login, no signup. The customer enters a name and email, pays with Halyk ePay, and gets a receipt with an activation code.
@@ -75,3 +76,27 @@ No real money moves in the test environment. For real payments use `HALYK_ENV=pr
 - No email is sent. The receipt page and the activation code are the proof of payment. Add an email service if you want receipts by mail.
 - The token request is sent as URL-encoded form data. Halyk's docs say form-data; if their endpoint rejects it, change `requestToken` in `backend/src/services/halyk.js`.
 - The simulator copies Halyk's documented flow, not the bank itself. Do one pass in the real test environment before going live.
+=======
+
+# HomeSync
+
+### A Digital Platform for Managing and Analyzing Family Responsibilities
+
+## Description
+HomeSync is a mobile and web platform designed to help families organize household responsibilities, track completed tasks, and analyze workload distribution.
+
+The system considers both physical household tasks and mental load, including planning, remembering, and coordinating activities.
+
+## Team
+- Budayeva Mariya - Team Lead, Backend
+- Tursungali Diara - ML/AI, DevOps-QA
+- Lyubeznova Nika - Frontend
+
+
+## Technology Stack
+- Frontend: React.js
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Machine Learning: Python, scikit-learn
+- AI: OpenAI API
+>>>>>>> 515fe879cc74dc40c478167a9d8cf8f95635db7e
