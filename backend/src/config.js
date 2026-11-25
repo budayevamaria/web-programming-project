@@ -1,3 +1,4 @@
+
 // Node 20.12+ reads .env itself, no dotenv package needed.
 try {
   process.loadEnvFile();
@@ -6,7 +7,10 @@ try {
 }
 
 const e = process.env;
-const mode = ["mock", "test", "prod"].includes(e.HALYK_ENV) ? e.HALYK_ENV : "mock";
+const mode = ["mock", "test", "prod"].includes(e.HALYK_ENV)
+  ? e.HALYK_ENV
+  : "mock";
+
 const mockPort = Number(e.HALYK_MOCK_PORT) || 4100;
 const mock = `http://localhost:${mockPort}`;
 
@@ -32,13 +36,22 @@ const port = Number(e.PORT) || 4000;
 
 export const config = {
   port,
+
   mongoUri: e.MONGO_URI || "mongodb://localhost:27017/halyk_pay",
+
+  openai: {
+  apiKey: e.OPENAI_API_KEY || "",
+  model: e.OPENAI_DEFAULT_MODEL || "gpt-6.2-sol",
+},
+
   publicApiUrl: e.PUBLIC_API_URL || `http://localhost:${port}`,
   frontendUrl: e.FRONTEND_URL || "http://localhost:5173",
+
   premium: {
     priceKzt: Number(e.PREMIUM_PRICE_KZT) || 2990,
     periodDays: Number(e.PREMIUM_DAYS) || 30,
   },
+
   halyk: {
     env: mode,
     mockPort,
@@ -50,5 +63,6 @@ export const config = {
   },
 };
 
-if (mode !== "mock" && !config.halyk.postlinkSecret)
+if (mode !== "mock" && !config.halyk.postlinkSecret) {
   throw new Error("Set HALYK_POSTLINK_SECRET (any long random string)");
+}
