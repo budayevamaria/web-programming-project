@@ -7,6 +7,7 @@ import { fileURLToPath } from 'url';
 import { config } from './config.js';
 import { notFound, errorHandler } from './middleware/errors.js';
 import api from './routes/api.js';
+import aiRoutes from './ai/aiRoutes.js';
 
 const widget = new URL(config.halyk.widgetUrl).origin;
 const halyk = [widget, 'https://*.homebank.kz', 'https://*.epayment.kz'];
@@ -33,6 +34,7 @@ app.use(express.json({ limit: '50kb' }));
 
 app.get('/api/health', (_req, res) => res.json({ ok: true, halyk: config.halyk.env }));
 app.use('/api', api);
+app.use('/api/ai', aiRoutes);
 app.use('/api', notFound);
 
 // Production: serve the built React app
